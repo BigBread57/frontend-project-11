@@ -1,25 +1,14 @@
-install: deps-install
-	npx simple-git-hooks
-
-deps-install:
+install:
 	npm ci
 
-deps-update:
-	npx ncu -u
-
-run:
-	gendiff file1.json file2.json
-
-test:
-	npm test
-
-test-coverage:
-	npm test -- --coverage
+develop:
+	npm run dev
 
 lint:
 	npx eslint .
 
-lint-fix:
-	npx eslint . --fix
+build:
+	NODE_ENV=production npm run build
 
-.PHONY: test
+test:
+	echo no tests
