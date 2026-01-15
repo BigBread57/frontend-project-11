@@ -6,7 +6,6 @@ export const validate = (watchedState, elements) => {
     // eslint-disable-next-line no-undef
     const parser = new DOMParser()
 
-    console.log(123)
     const schema = string().url().required()
 
     elements.form.addEventListener('submit', (e) => {
@@ -56,7 +55,7 @@ export const validate = (watchedState, elements) => {
                     const channelTitle = channel.getElementsByTagName("title")[0]?.textContent || ''
                     const channelDescription = channel.getElementsByTagName("description")[0]?.textContent || ''
 
-                    watchedState.rssFeeds.push({
+                    watchedState.rssFeeds.unshift({
                         title: channelTitle,
                         description: channelDescription,
                         url: rawRssUrl
@@ -73,13 +72,12 @@ export const validate = (watchedState, elements) => {
                         title,
                         description,
                         link,
-                        isRead: false,
                         id: watchedState.increment,
                     })
                     watchedState.increment += 1
                 }
 
-                watchedState.rssPosts.push(...rssPosts)
+                watchedState.rssPosts.unshift(...rssPosts)
             })
             .catch((error) => {
                 if (error.message === 'RSS уже существует') {
@@ -90,10 +88,6 @@ export const validate = (watchedState, elements) => {
 
                 if (error.name === 'ValidationError') {
                     elements.feedback.textContent = i18next.t('form.notValidUrl')
-                } else if (error.message === 'Network Error' || !error.response) {
-                    elements.feedback.textContent = i18next.t('form.netError')
-                } else {
-                    elements.feedback.textContent = i18next.t('form.generalError')
                 }
             })
 

@@ -1,13 +1,13 @@
 export default {
     translation: {
-        rss: {
-            aggregator: 'RSS агрегатор',
-            description: 'Начните читать RSS сегодня! Это легко, это красиво.',
+        static: {
+            title: 'RSS агрегатор',
+            lead: 'Начните читать RSS сегодня! Это легко, это красиво.',
+            urlInputLabel: 'Ссылка RSS',
             example: 'Пример: https://lorem-rss.hexlet.app/feed',
+            addUrlRss: 'Добавить',
         },
         form: {
-            add: 'Добавить',
-            label: 'Ссылка RSS',
             notValidRssUrl: 'Ресурс не содержит валидный RSS',
             notValidUrl: 'Ссылка должна быть валидным URL',
             urlExists: 'RSS уже существует',
