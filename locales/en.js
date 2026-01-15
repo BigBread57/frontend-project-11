@@ -1,31 +1,29 @@
-export default () => {
-  return {
+export default {
     translation: {
-      rss: {
-        aggregator: 'RSS агрегатор',
-        description: 'Начните читать RSS сегодня! Это легко, это красиво.',
-        add: 'Добавить',
-        example: 'Пример: https://lorem-rss.hexlet.app/feed',
-      },
-      form: {
-        label: 'Ссылка RSS',
-        notValidRssUrl: 'Ресурс не содержит валидный RSS',
-        notValidUrl: 'Ссылка должна быть валидным URL',
-        urlExists: 'RSS уже существует',
-        urlSuccessLoad: 'RSS успешно загружен',
+        rss: {
+            aggregator: 'RSS aggregator',
+            description: 'Start reading RSS today! It\'s easy, it\'s beautiful',
+            add: 'Add',
+            example: 'Example: https://lorem-rss.hexlet.app/feed',
+        },
+        form: {
+            label: 'RSS link',
+            notValidRssUrl: 'The resource does not contain a valid RSS feed',
+            notValidUrl: 'The link must be a valid URL',
+            urlExists: 'RSS already exists',
+            urlSuccessLoad: 'RSS uploaded successfully',
 
-      },
-      body: {
-        posts: 'Посты',
-        feeds: 'Фиды',
-        view: 'Просмотр',
-        viewAll: 'Читать полностью',
-        close: 'Закрыть',
-      },
-      footer: {
-        created: 'created by',
-        url: 'Hexlet',
-      },
+        },
+        body: {
+            posts: 'Posts',
+            feeds: 'Feeds',
+            view: 'View',
+            viewAll: 'Read more',
+            close: 'Close',
+        },
+        footer: {
+            created: 'created by',
+            url: 'Hexlet',
+        },
     },
-  }
 }

@@ -1,6 +1,6 @@
 
 
-export const createPosts = (elements, posts) => {
+export const renderPosts = (elements, posts) => {
     if (elements.posts.firstChild != null) {
         elements.posts.innerHTML = `
         <div class="col-md-10 col-lg-8 order-1 mx-auto posts">

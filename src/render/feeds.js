@@ -1,4 +1,4 @@
-export const createFeeds = (elements, feeds) => {
+export const renderFeeds = (elements, feeds) => {
     if (elements.posts.firstChild != null) {
         elements.posts.innerHTML = `
             <div class="col-md-10 col-lg-4 mx-auto order-0 order-lg-1 feeds">
